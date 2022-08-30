@@ -1,0 +1,17 @@
+.info-wrapper {
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+}
+
+.info-wrapper.dragmode {
+  border-style: dashed;
+}
+
+.info-message {
+  text-align: center;
+  color: #aaa;
+}
+
+.info-text span {
+  color: #555;
+}
