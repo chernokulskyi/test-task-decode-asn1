@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { CertificateData } from '../utils/data';
+import cn from 'classnames';
 
 interface Props {
   data: CertificateData[];
@@ -27,11 +28,11 @@ export const List: React.FC<Props> = ({
         {data.map((с) => (
           <li
             key={с.commonName}
-            className={`
-							list-item
-								${с.commonName === selected?.commonName ? ' active' : ''}
-								${isDragMode ? ' dragmode' : ''}
-						`}
+            className={cn(
+              'list-item',
+              { active: с.commonName === selected?.commonName },
+              { dragmode: isDragMode }
+            )}
             onClick={() => !isDragMode && setSelectedCertificate(с)}
           >
             <span>{с.commonName}</span>
