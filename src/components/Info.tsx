@@ -39,11 +39,11 @@ export const Info: React.FC<Props> = ({
       return;
     }
 
-    if (certificate.type !== 'application/x-x509-ca-cert') {
-      alert('Некоректний тип файлу');
-      setIsDragActive(false);
-      return;
-    }
+    // if (certificate.type !== 'application/x-x509-ca-cert') {
+    //   alert('Некоректний тип файлу');
+    //   setIsDragActive(false);
+    //   return;
+    // }
 
     try {
       const data = await getValuesFromCertificate(certificate);
